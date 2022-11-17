@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>To Do List</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+  </head>
+  <body>
+
+    <div class="box" id="heading">
+      <h1><%=list_title%></h1>
+    </div>
+
+  
+<div class = "box">
+<%  for(let i =0; i < newListItems.length;i++){  %>
+  <div class="item">
+    <input type="checkbox">
+    <p><%= newListItems[i] %></p>
+  </div>
+
+<%  } %>
+
+</div>
+ <div class="box">
+  <form  class="item" action="/" method="post">
+    <input type="text" name="newItem" placeholder="New item" autocomplete="off"> <br>
+    <button type="submit" name="button">+</button>
+  </form>
+ </div>
+
+
+  </body>
+</html>
